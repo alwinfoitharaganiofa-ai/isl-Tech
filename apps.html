@@ -58,8 +58,8 @@
       <div class="container">
         <h1 class="animate-on-scroll">📱 Our Apps</h1>
         <p class="animate-on-scroll animate-in-delay-1">
-          Browse upcoming isl-Tech applications. All apps are currently in
-          development — coming soon!
+          Browse isl-Tech applications. Click the download icon on any app to
+          see available downloads. Items marked "Not Available" are coming soon.
         </p>
       </div>
     </header>
@@ -101,9 +101,25 @@
         </div>
 
         <div class="apps-grid">
-          <div class="app-card animate-on-scroll">
+          <!-- ===== isL Package Tracker ===== -->
+          <div class="app-card animate-on-scroll" data-app="package-tracker">
             <div class="app-card-header">
-              <div class="app-card-icon">📦</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/package-tracker.svg"
+                  alt="isL Package Tracker logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '📦';
+                  "
+                />
+              </div>
               <h3>isL Package Tracker</h3>
             </div>
             <div class="app-meta">
@@ -117,18 +133,66 @@
               real-time updates, barcode scanning, and full offline support for
               remote areas.
             </p>
-            <div class="app-actions">
-              <span
-                class="btn btn-primary btn-sm"
-                style="opacity: 0.7; cursor: default; pointer-events: none"
-                >🔜 Available Soon</span
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('package-tracker')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-package-tracker">
+                <a
+                  href="downloads/isL-Package-Tracker-Setup.exe"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >⬇️ Download for Windows</a
+                >
+                <a
+                  href="downloads/isL-Package-Tracker.apk"
+                  class="btn btn-secondary btn-sm"
+                  download
+                  >📱 APK</a
+                >
+              </div>
             </div>
           </div>
 
-          <div class="app-card animate-on-scroll animate-in-delay-1">
+          <!-- ===== SolWeather Lite ===== -->
+          <div
+            class="app-card animate-on-scroll animate-in-delay-1"
+            data-app="solweather"
+          >
             <div class="app-card-header">
-              <div class="app-card-icon">🌤️</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/solweather.svg"
+                  alt="SolWeather Lite logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '🌤️';
+                  "
+                />
+              </div>
               <h3>SolWeather Lite</h3>
             </div>
             <div class="app-meta">
@@ -141,18 +205,72 @@
               swell, rainfall, and UV data for every province with offline
               caching.
             </p>
-            <div class="app-actions">
-              <span
-                class="btn btn-primary btn-sm"
-                style="opacity: 0.7; cursor: default; pointer-events: none"
-                >🔜 Available Soon</span
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('solweather')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-solweather">
+                <a
+                  href="downloads/SolWeather-Lite-Setup.exe"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >⬇️ Download for Windows</a
+                >
+                <a
+                  href="downloads/SolWeather-Lite-Linux.AppImage"
+                  class="btn btn-secondary btn-sm"
+                  download
+                  >🐧 Linux</a
+                >
+                <a
+                  href="downloads/SolWeather-Lite-macOS.dmg"
+                  class="btn btn-secondary btn-sm"
+                  download
+                  >🍎 macOS</a
+                >
+              </div>
             </div>
           </div>
 
-          <div class="app-card animate-on-scroll animate-in-delay-2">
+          <!-- ===== Kastom Wallet ===== -->
+          <div
+            class="app-card animate-on-scroll animate-in-delay-2"
+            data-app="kastom-wallet"
+          >
             <div class="app-card-header">
-              <div class="app-card-icon">💰</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/kastom-wallet.svg"
+                  alt="Kastom Wallet logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '💰';
+                  "
+                />
+              </div>
               <h3>Kastom Wallet</h3>
             </div>
             <div class="app-meta">
@@ -165,18 +283,60 @@
               Digital wallet built for the Pacific. Send money in SBD, track
               daily expenses, manage micro-savings, and generate QR payments.
             </p>
-            <div class="app-actions">
-              <span
-                class="btn btn-primary btn-sm"
-                style="opacity: 0.7; cursor: default; pointer-events: none"
-                >🔜 Available Soon</span
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('kastom-wallet')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-kastom-wallet">
+                <a
+                  href="downloads/Kastom-Wallet.apk"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >📱 Download APK</a
+                >
+                <span class="btn btn-secondary btn-sm unavailable"
+                  >🍎 iOS (Coming Soon)</span
+                >
+              </div>
             </div>
           </div>
 
-          <div class="app-card animate-on-scroll animate-in-delay-1">
+          <!-- ===== SI News Hub ===== -->
+          <div class="app-card animate-on-scroll" data-app="si-news-hub">
             <div class="app-card-header">
-              <div class="app-card-icon">📰</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/si-news-hub.svg"
+                  alt="SI News Hub logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '📰';
+                  "
+                />
+              </div>
               <h3>SI News Hub</h3>
             </div>
             <div class="app-meta">
@@ -188,18 +348,66 @@
               Aggregated news from across the Solomon Islands. Read articles
               from SIBC, Solomon Star, Island Sun and more in one place.
             </p>
-            <div class="app-actions">
-              <span
-                class="btn btn-primary btn-sm"
-                style="opacity: 0.7; cursor: default; pointer-events: none"
-                >🔜 Available Soon</span
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('si-news-hub')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-si-news-hub">
+                <a
+                  href="downloads/SI-News-Hub-Setup.exe"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >⬇️ Download for Windows</a
+                >
+                <a
+                  href="downloads/SI-News-Hub.AppImage"
+                  class="btn btn-secondary btn-sm"
+                  download
+                  >🐧 Linux</a
+                >
+              </div>
             </div>
           </div>
 
-          <div class="app-card animate-on-scroll animate-in-delay-2">
+          <!-- ===== Honiara Guide ===== -->
+          <div
+            class="app-card animate-on-scroll animate-in-delay-1"
+            data-app="honiara-guide"
+          >
             <div class="app-card-header">
-              <div class="app-card-icon">🗺️</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/honiara-guide.svg"
+                  alt="Honiara Guide logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '🗺️';
+                  "
+                />
+              </div>
               <h3>Honiara Guide</h3>
             </div>
             <div class="app-meta">
@@ -212,18 +420,63 @@
               Explore Honiara with interactive maps, business directories,
               public transport routes, and tourist information — all offline.
             </p>
-            <div class="app-actions">
-              <span
-                class="btn btn-primary btn-sm"
-                style="opacity: 0.7; cursor: default; pointer-events: none"
-                >🔜 Available Soon</span
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('honiara-guide')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-honiara-guide">
+                <a
+                  href="downloads/Honiara-Guide.apk"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >📱 Download APK</a
+                >
+                <span class="btn btn-secondary btn-sm unavailable"
+                  >🍎 iOS (Coming Soon)</span
+                >
+              </div>
             </div>
           </div>
 
-          <div class="app-card animate-on-scroll">
+          <!-- ===== MarketMate SI ===== -->
+          <div
+            class="app-card animate-on-scroll animate-in-delay-2"
+            data-app="marketmate"
+          >
             <div class="app-card-header">
-              <div class="app-card-icon">📊</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/marketmate.svg"
+                  alt="MarketMate SI logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '📊';
+                  "
+                />
+              </div>
               <h3>MarketMate SI</h3>
             </div>
             <div class="app-meta">
@@ -235,18 +488,69 @@
               Local marketplace app connecting buyers and sellers across the
               Solomon Islands. List products, chat, and arrange delivery.
             </p>
-            <div class="app-actions">
-              <span
-                class="btn btn-primary btn-sm"
-                style="opacity: 0.7; cursor: default; pointer-events: none"
-                >🔜 Available Soon</span
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('marketmate')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-marketmate">
+                <a
+                  href="downloads/MarketMate-SI-Setup.exe"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >⬇️ Download for Windows</a
+                >
+                <a
+                  href="downloads/MarketMate-SI.dmg"
+                  class="btn btn-secondary btn-sm"
+                  download
+                  >🍎 macOS</a
+                >
+                <a
+                  href="downloads/MarketMate-SI.AppImage"
+                  class="btn btn-secondary btn-sm"
+                  download
+                  >🐧 Linux</a
+                >
+              </div>
             </div>
           </div>
 
-          <div class="app-card animate-on-scroll animate-in-delay-1">
+          <!-- ===== Island Hearts ===== -->
+          <div class="app-card animate-on-scroll" data-app="island-hearts">
             <div class="app-card-header">
-              <div class="app-card-icon">💕</div>
+              <div class="app-card-icon">
+                <img
+                  src="downloads/logos/Island_Hearts.svg"
+                  alt="Island Hearts logo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 4px;
+                  "
+                  onerror="
+                    this.style.display = 'none';
+                    this.parentElement.textContent = '💕';
+                  "
+                />
+              </div>
               <h3>Island Hearts</h3>
             </div>
             <div class="app-meta">
@@ -261,10 +565,38 @@
               Share moments, discover stories, and build meaningful connections
               with your community.
             </p>
-            <div class="app-actions">
-              <a href="downloads.html" class="btn btn-primary btn-sm"
-                >📱 View Downloads</a
+            <div class="app-card-footer">
+              <button
+                class="download-icon-btn"
+                onclick="toggleAppDownloads('island-hearts')"
+                title="Download"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </button>
+              <div class="app-downloads" id="downloads-island-hearts">
+                <a
+                  href="downloads/Island-Hearts.apk"
+                  class="btn btn-primary btn-sm"
+                  download
+                  >📱 Download APK</a
+                >
+                <span class="btn btn-secondary btn-sm unavailable"
+                  >🍎 iOS (Coming Soon)</span
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -344,5 +676,56 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+      // ========================================
+      // CHECK DOWNLOAD FILE EXISTENCE
+      // Shows "Unavailable" if the linked file
+      // does not exist on the server.
+      // ========================================
+      document.addEventListener("DOMContentLoaded", async function () {
+        const downloadLinks = document.querySelectorAll(
+          ".app-downloads a[download]",
+        );
+
+        for (const link of downloadLinks) {
+          const href = link.getAttribute("href");
+          if (!href) continue;
+
+          try {
+            const response = await fetch(href, { method: "HEAD" });
+            if (!response.ok) {
+              markUnavailable(link);
+            }
+          } catch {
+            // Network error means file definitely not accessible
+            markUnavailable(link);
+          }
+        }
+
+        function markUnavailable(link) {
+          // Replace the <a> with a <span> so it can't be clicked
+          const span = document.createElement("span");
+          span.className = link.className + " unavailable";
+          span.style.opacity = "0.6";
+          span.style.cursor = "default";
+          span.style.pointerEvents = "none";
+
+          // Preserve emoji/icon in the text
+          const linkText = link.textContent.trim();
+          // Replace download-related words with "Unavailable"
+          const newText = linkText
+            .replace(/^(⬇️\s*)?Download(\s+for\s+\w+)?$/i, "❌ Unavailable")
+            .replace(/^📱\s*(Download\s+)?APK$/i, "❌ APK Unavailable")
+            .replace(/^🐧\s*Linux$/i, "❌ Linux Unavailable")
+            .replace(
+              /^🍎\s*(macOS|iOS(\s+\(Coming Soon\))?)$/i,
+              "❌ macOS Unavailable",
+            );
+
+          span.textContent = newText;
+          link.parentNode.replaceChild(span, link);
+        }
+      });
+    </script>
   </body>
 </html>

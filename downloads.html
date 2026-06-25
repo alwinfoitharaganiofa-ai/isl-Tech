@@ -582,7 +582,9 @@
 
     <script src="assets/js/main.js"></script>
     <script>
-      // Platform filter buttons
+      // ========================================
+      // PLATFORM FILTER BUTTONS
+      // ========================================
       document.querySelectorAll(".filter-btn").forEach((btn) => {
         btn.addEventListener("click", function () {
           // Update active button styles
@@ -606,7 +608,9 @@
         });
       });
 
-      // Dropdown toggles for "Other Platforms"
+      // ========================================
+      // DROPDOWN TOGGLES
+      // ========================================
       function toggleDropdown(btn) {
         const menu = btn.nextElementSibling;
         const isOpen = menu.classList.contains("show");
@@ -625,6 +629,57 @@
           document
             .querySelectorAll(".dropdown-menu")
             .forEach((m) => m.classList.remove("show"));
+        }
+      });
+
+      // ========================================
+      // CHECK DOWNLOAD FILE EXISTENCE
+      // Shows "Unavailable" if the linked file
+      // does not exist on the server.
+      // ========================================
+      document.addEventListener("DOMContentLoaded", async function () {
+        // Collect all download links inside .download-actions and .dropdown-menu
+        const downloadLinks = document.querySelectorAll(
+          ".download-actions a[download], .dropdown-menu a[download]",
+        );
+
+        for (const link of downloadLinks) {
+          const href = link.getAttribute("href");
+          if (!href) continue;
+
+          try {
+            const response = await fetch(href, { method: "HEAD" });
+            if (!response.ok) {
+              markUnavailable(link);
+            }
+          } catch {
+            // Network error means file definitely not accessible
+            markUnavailable(link);
+          }
+        }
+
+        function markUnavailable(link) {
+          // Replace the <a> with a <span> so it can't be clicked
+          const span = document.createElement("span");
+          span.className = link.className + " unavailable";
+          span.style.opacity = "0.6";
+          span.style.cursor = "default";
+          span.style.pointerEvents = "none";
+
+          // Preserve emoji/icon in the text
+          const linkText = link.textContent.trim();
+          // Replace download-related words with "Unavailable"
+          const newText = linkText
+            .replace(/^(⬇️\s*)?Download(\s+for\s+\w+)?$/i, "❌ Unavailable")
+            .replace(/^📱\s*(Download\s+)?APK$/i, "❌ APK Unavailable")
+            .replace(/^🐧\s*Linux$/i, "❌ Linux Unavailable")
+            .replace(
+              /^🍎\s*(macOS|iOS(\s+\(Coming Soon\))?)$/i,
+              "❌ macOS Unavailable",
+            );
+
+          span.textContent = newText;
+          link.parentNode.replaceChild(span, link);
         }
       });
     </script>
