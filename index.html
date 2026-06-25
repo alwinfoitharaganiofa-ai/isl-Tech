@@ -22,7 +22,7 @@
       <div class="container">
         <a href="index.html" class="nav-brand">
           <img
-            src="assets/images/Gemini_Generated_Image_qq8vhxqq8vhxqq8v.png"
+            src="assets/images/Isl-Tech Logo.png"
             alt="isl-Tech logo"
             class="brand-logo"
           />
@@ -71,14 +71,6 @@
               >🛍️ Shop Products</a
             >
           </div>
-
-          <!-- Hint to upload cover image -->
-          <div class="hero-upload-hint">
-            <span
-              >💡 Tip: Upload your cover image to
-              <code>assets/images/hero-cover.jpg</code></span
-            >
-          </div>
         </div>
 
         <div class="hero-visual animate-on-scroll animate-in-delay-2">
@@ -88,7 +80,7 @@
              Recommended size: 600x500px or similar 6:5 ratio -->
           <div class="hero-cover">
             <img
-              src="assets/images/hero-cover-placeholder.jpg"
+              src="assets/images/isl-Tech Cover.png"
               alt="isl-Tech cover"
               class="hero-cover-img"
               onerror="
@@ -151,82 +143,25 @@
     </section>
 
     <!-- ==================== LATEST APPS PREVIEW ==================== -->
-    <section style="background: var(--bg-secondary)">
+    <section id="latest-apps" style="background: var(--bg-secondary)">
       <div class="container">
         <div class="text-center animate-on-scroll">
-          <h2 class="section-title">Latest Apps</h2>
-          <p class="section-subtitle">
-            Try the newest builds, fresh off the dev server
-          </p>
+          <h2 class="section-title">Latest App</h2>
+          <p class="section-subtitle">The newest release, ready to download</p>
         </div>
 
-        <div class="apps-grid">
-          <div class="app-card animate-on-scroll animate-in-delay-1">
-            <div class="app-card-header">
-              <div class="app-card-icon">📦</div>
-              <h3>isL Package Tracker</h3>
-            </div>
-            <div class="app-meta">
-              <span class="tag-new">New</span>
-              <span>v1.2.0</span>
-              <span>Android</span>
-            </div>
-            <p>
-              Track shipping and freight across the Solomon Islands with
-              real-time updates and offline support.
-            </p>
-            <div class="app-actions">
-              <a href="apps.html" class="btn btn-primary btn-sm">📥 Download</a>
-              <a href="apps.html" class="btn btn-secondary btn-sm"
-                >ℹ️ Details</a
-              >
-            </div>
-          </div>
-
-          <div class="app-card animate-on-scroll animate-in-delay-2">
-            <div class="app-card-header">
-              <div class="app-card-icon">🌤️</div>
-              <h3>SolWeather Lite</h3>
-            </div>
-            <div class="app-meta">
-              <span class="tag-beta">Beta</span>
-              <span>v0.9.0</span>
-              <span>Web</span>
-            </div>
-            <p>
-              Hyper-local weather forecasts for the Solomon Islands. Wind,
-              swell, and rainfall data for every province.
-            </p>
-            <div class="app-actions">
-              <a href="apps.html" class="btn btn-primary btn-sm"
-                >🌐 Try Web App</a
-              >
-              <a href="apps.html" class="btn btn-secondary btn-sm"
-                >ℹ️ Details</a
-              >
-            </div>
-          </div>
-
-          <div class="app-card animate-on-scroll animate-in-delay-3">
-            <div class="app-card-header">
-              <div class="app-card-icon">💰</div>
-              <h3>Kastom Wallet</h3>
-            </div>
-            <div class="app-meta">
-              <span>v2.1.0</span>
-              <span>Android</span>
-              <span>iOS</span>
-            </div>
-            <p>
-              Digital wallet for the Pacific — send money, track expenses, and
-              manage micro-savings in SBD.
-            </p>
-            <div class="app-actions">
-              <a href="apps.html" class="btn btn-primary btn-sm">📥 Download</a>
-              <a href="apps.html" class="btn btn-secondary btn-sm"
-                >ℹ️ Details</a
-              >
-            </div>
+        <div
+          id="latest-app-container"
+          class="apps-grid"
+          style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto"
+        >
+          <!-- Dynamically populated by JavaScript -->
+          <div
+            id="latest-app-loading"
+            class="text-center"
+            style="padding: 2rem; color: var(--text-muted)"
+          >
+            Checking for latest app...
           </div>
         </div>
 
@@ -309,5 +244,247 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+      // ========================================
+      // DYNAMIC LATEST APP LOADER
+      // Shows only the most recently added app
+      // that has at least one valid download file.
+      // ========================================
+      document.addEventListener("DOMContentLoaded", async function () {
+        const container = document.getElementById("latest-app-container");
+        if (!container) return;
+
+        // ── App Data (add new apps at the END for latest) ──
+        const apps = [
+          {
+            id: "package-tracker",
+            icon: "📦",
+            logo: "downloads/logos/package-tracker.svg",
+            name: "isL Package Tracker",
+            version: "v1.2.0",
+            tags: ["New", "Android"],
+            tagClass: "tag-new",
+            description:
+              "Track shipping and freight across the Solomon Islands with real-time updates and offline support.",
+            detailsLink: "apps.html",
+            downloads: [
+              {
+                url: "downloads/isL-Package-Tracker-Setup.exe",
+                label: "⬇️ Download for Windows",
+              },
+              { url: "downloads/isL-Package-Tracker.apk", label: "📱 APK" },
+            ],
+          },
+          {
+            id: "solweather",
+            icon: "🌤️",
+            logo: "downloads/logos/solweather.svg",
+            name: "SolWeather Lite",
+            version: "v0.9.2",
+            tags: ["Beta", "Web"],
+            tagClass: "tag-beta",
+            description:
+              "Hyper-local weather forecasts for the Solomon Islands. Wind, swell, rainfall, and UV data for every province.",
+            detailsLink: "apps.html",
+            downloads: [
+              {
+                url: "downloads/SolWeather-Lite-Setup.exe",
+                label: "⬇️ Download for Windows",
+              },
+              {
+                url: "downloads/SolWeather-Lite-Linux.AppImage",
+                label: "🐧 Linux",
+              },
+              { url: "downloads/SolWeather-Lite-macOS.dmg", label: "🍎 macOS" },
+            ],
+          },
+          {
+            id: "kastom-wallet",
+            icon: "💰",
+            logo: "downloads/logos/kastom-wallet.svg",
+            name: "Kastom Wallet",
+            version: "v2.1.0",
+            tags: ["Android", "iOS"],
+            tagClass: "",
+            description:
+              "Digital wallet for the Pacific — send money, track expenses, and manage micro-savings in SBD.",
+            detailsLink: "apps.html",
+            downloads: [
+              { url: "downloads/Kastom-Wallet.apk", label: "📱 Download APK" },
+            ],
+          },
+          {
+            id: "si-news-hub",
+            icon: "📰",
+            logo: "downloads/logos/si-news-hub.svg",
+            name: "SI News Hub",
+            version: "v3.0.1",
+            tags: ["Android", "Web"],
+            tagClass: "",
+            description:
+              "Aggregated news from across the Solomon Islands. Read articles from SIBC, Solomon Star, Island Sun and more in one place.",
+            detailsLink: "apps.html",
+            downloads: [
+              {
+                url: "downloads/SI-News-Hub-Setup.exe",
+                label: "⬇️ Download for Windows",
+              },
+              { url: "downloads/SI-News-Hub.AppImage", label: "🐧 Linux" },
+            ],
+          },
+          {
+            id: "honiara-guide",
+            icon: "🗺️",
+            logo: "downloads/logos/honiara-guide.svg",
+            name: "Honiara Guide",
+            version: "v1.0.0",
+            tags: ["New", "Android", "iOS"],
+            tagClass: "tag-new",
+            description:
+              "Explore Honiara with interactive maps, business directories, public transport routes, and tourist information — all offline.",
+            detailsLink: "apps.html",
+            downloads: [
+              { url: "downloads/Honiara-Guide.apk", label: "📱 Download APK" },
+            ],
+          },
+          {
+            id: "marketmate",
+            icon: "📊",
+            logo: "downloads/logos/marketmate.svg",
+            name: "MarketMate SI",
+            version: "v0.8.0",
+            tags: ["Beta", "Web"],
+            tagClass: "tag-beta",
+            description:
+              "Local marketplace app connecting buyers and sellers across the Solomon Islands. List products, chat, and arrange delivery.",
+            detailsLink: "apps.html",
+            downloads: [
+              {
+                url: "downloads/MarketMate-SI-Setup.exe",
+                label: "⬇️ Download for Windows",
+              },
+              { url: "downloads/MarketMate-SI.dmg", label: "🍎 macOS" },
+              { url: "downloads/MarketMate-SI.AppImage", label: "🐧 Linux" },
+            ],
+          },
+          {
+            id: "island-hearts",
+            icon: "💕",
+            logo: "downloads/logos/Island_Hearts.svg",
+            name: "Island Hearts",
+            version: "v1.5.0",
+            tags: ["Pre Seed App", "Android", "iOS"],
+            tagClass: "tag-new",
+            description:
+              "A beautiful app connecting hearts across the Solomon Islands. Share moments, discover stories, and build meaningful connections with your community.",
+            detailsLink: "apps.html",
+            downloads: [
+              { url: "downloads/Island-Hearts.apk", label: "📱 Download APK" },
+            ],
+          },
+        ];
+
+        // ── Helper: Check if a file exists via HEAD request ──
+        async function fileExists(url) {
+          try {
+            const response = await fetch(url, { method: "HEAD" });
+            return response.ok;
+          } catch {
+            return false;
+          }
+        }
+
+        // ── Helper: Check if an app has at least one valid download ──
+        async function hasValidDownloads(app) {
+          const results = await Promise.all(
+            app.downloads.map((d) => fileExists(d.url)),
+          );
+          return results.some((exists) => exists === true);
+        }
+
+        // ── Helper: Get valid download links for an app ──
+        async function getValidDownloads(app) {
+          const results = await Promise.all(
+            app.downloads.map(async (d) => ({
+              ...d,
+              exists: await fileExists(d.url),
+            })),
+          );
+          return results.filter((d) => d.exists);
+        }
+
+        // ── Build app card HTML ──
+        function buildAppCard(app, validDownloads) {
+          const tagsHtml = app.tags
+            .map(
+              (t) =>
+                `<span class="${t === "New" || t === "Pre Seed App" ? "tag-new" : t === "Beta" ? "tag-beta" : ""}">${t}</span>`,
+            )
+            .join(" ");
+
+          const downloadsHtml = validDownloads
+            .map(
+              (d) =>
+                `<a href="${d.url}" class="btn btn-primary btn-sm" download>${d.label}</a>`,
+            )
+            .join(" ");
+
+          return `
+            <div class="app-card animate-on-scroll">
+              <div class="app-card-header">
+                <div class="app-card-icon">
+                  <img
+                    src="${app.logo}"
+                    alt="${app.name} logo"
+                    style="width: 100%; height: 100%; object-fit: contain; padding: 4px;"
+                    onerror="this.style.display='none'; this.parentElement.textContent='${app.icon}';"
+                  />
+                </div>
+                <h3>${app.name}</h3>
+              </div>
+              <div class="app-meta">
+                ${tagsHtml}
+                <span>${app.version}</span>
+              </div>
+              <p>${app.description}</p>
+              <div class="app-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                ${downloadsHtml}
+                <a href="${app.detailsLink}" class="btn btn-secondary btn-sm">ℹ️ Details</a>
+              </div>
+            </div>
+          `;
+        }
+
+        // ── Main logic: find latest app with valid downloads ──
+        // Iterate in REVERSE (latest added app first)
+        let latestAppWithDownload = null;
+        let validDownloads = [];
+
+        for (let i = apps.length - 1; i >= 0; i--) {
+          const app = apps[i];
+          const hasValid = await hasValidDownloads(app);
+          if (hasValid) {
+            latestAppWithDownload = app;
+            validDownloads = await getValidDownloads(app);
+            break;
+          }
+        }
+
+        if (latestAppWithDownload) {
+          container.innerHTML = buildAppCard(
+            latestAppWithDownload,
+            validDownloads,
+          );
+        } else {
+          container.innerHTML = `
+            <div class="text-center" style="padding: 2rem; color: var(--text-muted);">
+              <p style="font-size: 2rem; margin-bottom: 0.5rem;">📦</p>
+              <p>No apps with downloads available yet.</p>
+              <p style="font-size: 0.9rem; margin-top: 0.5rem;">Check back soon or browse all apps.</p>
+            </div>
+          `;
+        }
+      });
+    </script>
   </body>
 </html>

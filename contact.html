@@ -1,202 +1,401 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with isl-Tech — email, social media, and contact form for support and inquiries."
+    />
+    <title>Contact | isl-Tech</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="About isl-Tech — our mission, story, and vision for technology in the Solomon Islands.">
-  <title>About | isl-Tech</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-</head>
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="nav-brand">
+          <img
+            src="assets/images/Isl-Tech Logo.png"
+            alt="isl-Tech logo"
+            class="brand-logo"
+          />
+          <span>isl-Tech</span>
+        </a>
 
-<body>
-
-  <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/images/Gemini_Generated_Image_qq8vhxqq8vhxqq8v.png" alt="isl-Tech logo" class="brand-logo">
-        <span>isl-Tech</span>
-      </a>
-
-      <div class="nav-links" id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="apps.html">Apps</a>
-        <a href="downloads.html">Downloads</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-          <span class="theme-icon">☀️</span>
-        </button>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- ==================== PAGE HEADER ==================== -->
-  <header class="page-header">
-    <div class="container">
-      <h1 class="animate-on-scroll">About isl-Tech</h1>
-      <p class="animate-on-scroll animate-in-delay-1">
-        Our story, our mission, and our commitment to Pacific tech innovation.
-      </p>
-    </div>
-  </header>
-
-  <!-- ==================== ABOUT CONTENT ==================== -->
-  <section>
-    <div class="container">
-      <div class="about-content">
-        <div class="about-text animate-on-scroll">
-          <h2>🇸🇧 Built in the Solomon Islands, for the world</h2>
-          <p>
-            <strong>isl-Tech</strong> was founded with a simple belief: the Solomon Islands deserves
-            world-class technology that works for our unique context. We're not just importing
-            foreign solutions — we're building our own.
-          </p>
-          <p>
-            From Honiara to the remote provinces, our tools are designed to work with
-            limited bandwidth, offline-capable where it matters, and priced for the local
-            economy. Yet they're built to standards that compete anywhere in the world.
-          </p>
-          <p>
-            Whether you're a small business owner in Gizo, a student in Auki, or a developer
-            in Sydney — isl-Tech has something for you. We specialize in mobile apps,
-            web platforms, and digital products that bridge the gap between Pacific needs
-            and global technology.
-          </p>
-
-          <h2 style="margin-top: 2.5rem;">🎯 Our Mission</h2>
-          <p>
-            To accelerate digital transformation across the Solomon Islands by building
-            accessible, reliable, and locally-relevant technology — while showcasing
-            Pacific innovation to the rest of the world.
-          </p>
-
-          <h2 style="margin-top: 2.5rem;">👨‍💻 About the Founder</h2>
-          <p>
-            isl-Tech is a solo venture — one developer passionate about using code to solve
-            real problems for Pacific Island communities. From building your first business
-            website to launching cross-platform mobile apps, every project gets personal
-            attention and a deep understanding of local context.
-          </p>
-        </div>
-
-        <div class="about-stats animate-on-scroll animate-in-delay-1">
-          <div class="stat-card">
-            <div class="stat-number">6+</div>
-            <div class="stat-label">Apps Launched</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">9</div>
-            <div class="stat-label">Provinces Served</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Pacific Owned</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Support Available</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== VALUES ==================== -->
-  <section style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="text-center animate-on-scroll">
-        <h2 class="section-title">Our Values</h2>
-        <p class="section-subtitle">What drives every line of code we write</p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card animate-on-scroll animate-in-delay-1">
-          <div class="feature-icon">🌿</div>
-          <h3>Local First</h3>
-          <p>We design for Pacific realities — low bandwidth, intermittent power, and diverse languages. If it works
-            here, it works anywhere.</p>
-        </div>
-
-        <div class="feature-card animate-on-scroll animate-in-delay-2">
-          <div class="feature-icon">🔓</div>
-          <h3>Open & Accessible</h3>
-          <p>Where possible, we open-source our work and keep pricing fair. Technology should empower, not exclude.</p>
-        </div>
-
-        <div class="feature-card animate-on-scroll animate-in-delay-3">
-          <div class="feature-icon">💪</div>
-          <h3>Resilient by Design</h3>
-          <p>Offline-first, lightweight, and robust. Our apps keep working even when the internet doesn't.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-brand">
-            <div class="brand-icon">iT</div>
-            <span>isl-Tech</span>
-          </a>
-          <p>Empowering the Solomon Islands with modern technology — from Honiara to the world.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="GitHub">🐙</a>
-            <a href="#" aria-label="Facebook">📘</a>
-            <a href="#" aria-label="YouTube">🎬</a>
-            <a href="#" aria-label="Email">✉️</a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <h4>Quick Links</h4>
+        <div class="nav-links" id="nav-links">
           <a href="index.html">Home</a>
           <a href="apps.html">Apps</a>
           <a href="downloads.html">Downloads</a>
           <a href="products.html">Products</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon">☀️</span>
+          </button>
         </div>
 
-        <div class="footer-links">
-          <h4>Products</h4>
-          <a href="products.html">Software</a>
-          <a href="products.html">Hardware</a>
-          <a href="products.html">Digital Assets</a>
-          <a href="products.html">Consulting</a>
-        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
-        <div class="footer-links">
-          <h4>Support</h4>
-          <a href="contact.html">Contact Us</a>
-          <a href="#">FAQ</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="page-header">
+      <div class="container">
+        <h1 class="animate-on-scroll">📬 Contact Us</h1>
+        <p class="animate-on-scroll animate-in-delay-1">
+          Have a question, project idea, or just want to say hello? We'd love to
+          hear from you.
+        </p>
+      </div>
+    </header>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section>
+      <div class="container">
+        <div class="about-content" style="gap: 3rem">
+          <!-- Contact Info -->
+          <div class="about-text animate-on-scroll">
+            <h2>Get in Touch</h2>
+            <p>
+              Whether you need a custom app, a website, tech support, or just
+              want to collaborate — feel free to reach out. We're based in the
+              Solomon Islands and respond to all inquiries personally.
+            </p>
+
+            <div style="margin-top: 2rem">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <div style="font-size: 1.5rem">📧</div>
+                <div>
+                  <strong>Email</strong><br />
+                  <a
+                    href="mailto:isltechroom@gmail.com"
+                    style="color: var(--accent)"
+                    >isltechroom@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <div style="font-size: 1.5rem">☎️</div>
+                <div>
+                  <strong>Phone</strong><br />
+                  <a href="tel:+677 7257434" style="color: var(--accent)"
+                    >+677 7257434</a
+                  >
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <div style="font-size: 1.5rem">📍</div>
+                <div>
+                  <strong>Location</strong><br />
+                  <span>Honiara, Solomon Islands</span>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <div style="font-size: 1.5rem">🐙</div>
+                <div>
+                  <strong>GitHub</strong><br />
+                  <a href="#" style="color: var(--accent)"
+                    >github.com/isltech</a
+                  >
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 1rem">
+                <div style="font-size: 1.5rem">📘</div>
+                <div>
+                  <strong>Facebook</strong><br />
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61590970205500&sk=directory_links"
+                    style="color: var(--accent)"
+                    >isl-Tech</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="about-text animate-on-scroll animate-in-delay-1">
+            <h2>Send a Message</h2>
+            <form
+              id="contact-form"
+              style="display: flex; flex-direction: column; gap: 1rem"
+            >
+              <div>
+                <label
+                  for="name"
+                  style="
+                    display: block;
+                    margin-bottom: 0.4rem;
+                    font-weight: 500;
+                  "
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Smith"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: 8px;
+                    border: 1px solid var(--border-color);
+                    background: var(--bg-primary);
+                    color: var(--text-primary);
+                    font-size: 1rem;
+                  "
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  style="
+                    display: block;
+                    margin-bottom: 0.4rem;
+                    font-weight: 500;
+                  "
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="john@example.com"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: 8px;
+                    border: 1px solid var(--border-color);
+                    background: var(--bg-primary);
+                    color: var(--text-primary);
+                    font-size: 1rem;
+                  "
+                />
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  style="
+                    display: block;
+                    margin-bottom: 0.4rem;
+                    font-weight: 500;
+                  "
+                  >Subject</label
+                >
+                <select
+                  id="subject"
+                  name="subject"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: 8px;
+                    border: 1px solid var(--border-color);
+                    background: var(--bg-primary);
+                    color: var(--text-primary);
+                    font-size: 1rem;
+                  "
+                >
+                  <option value="general">General Inquiry</option>
+                  <option value="project">Project Request</option>
+                  <option value="support">Technical Support</option>
+                  <option value="business">Business Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  style="
+                    display: block;
+                    margin-bottom: 0.4rem;
+                    font-weight: 500;
+                  "
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us about your project or question..."
+                  required
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: 8px;
+                    border: 1px solid var(--border-color);
+                    background: var(--bg-primary);
+                    color: var(--text-primary);
+                    font-size: 1rem;
+                    resize: vertical;
+                    min-height: 120px;
+                  "
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="align-self: flex-start"
+              >
+                ✉️ Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <span>&copy; 2025 isl-Tech. All rights reserved.</span>
-        <span>Built with 💚 for the Solomon Islands</span>
+    <!-- ==================== FAQ ==================== -->
+    <section style="background: var(--bg-secondary)">
+      <div class="container">
+        <div class="text-center animate-on-scroll">
+          <h2 class="section-title">❓ Frequently Asked Questions</h2>
+          <p class="section-subtitle">Quick answers to common questions</p>
+        </div>
+
+        <div style="max-width: 700px; margin: 0 auto">
+          <div
+            class="feature-card animate-on-scroll"
+            style="margin-bottom: 1rem"
+          >
+            <h3>How quickly do you respond?</h3>
+            <p>
+              We typically respond within 24 hours on business days. For urgent
+              inquiries, mention it in your subject line and we'll prioritise
+              you.
+            </p>
+          </div>
+
+          <div
+            class="feature-card animate-on-scroll animate-in-delay-1"
+            style="margin-bottom: 1rem"
+          >
+            <h3>Do you work with clients outside the Solomon Islands?</h3>
+            <p>
+              Absolutely! While our focus is the Pacific, we work with clients
+              worldwide. Distance is no barrier in the digital world.
+            </p>
+          </div>
+
+          <div class="feature-card animate-on-scroll animate-in-delay-2">
+            <h3>What information should I include in my inquiry?</h3>
+            <p>
+              The more detail the better! Tell us about your project, budget
+              range, timeline, and any specific requirements. This helps us give
+              you a more accurate response.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="assets/js/main.js"></script>
-</body>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-brand">
+              <div class="brand-icon">iT</div>
+              <span>isl-Tech</span>
+            </a>
+            <p>
+              Empowering the Solomon Islands with modern technology — from
+              Honiara to the world.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="GitHub">🐙</a>
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="YouTube">🎬</a>
+              <a href="#" aria-label="Email">✉️</a>
+            </div>
+          </div>
 
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>
+            <a href="downloads.html">Downloads</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="footer-links">
+            <h4>Products</h4>
+            <a href="products.html">Software</a>
+            <a href="products.html">Hardware</a>
+            <a href="products.html">Digital Assets</a>
+            <a href="products.html">Consulting</a>
+          </div>
+
+          <div class="footer-links">
+            <h4>Support</h4>
+            <a href="contact.html">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>&copy; 2025 isl-Tech. All rights reserved.</span>
+          <span>Built with 💚 for the Solomon Islands</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
