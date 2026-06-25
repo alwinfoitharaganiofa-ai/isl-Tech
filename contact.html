@@ -22,7 +22,7 @@
       <div class="container">
         <a href="index.html" class="nav-brand">
           <img
-            src="assets/images/Isl-Tech Logo.png"
+            src="assets/images/isl-Tech Logo.png"
             alt="isl-Tech logo"
             class="brand-logo"
           />
@@ -67,9 +67,9 @@
     <!-- ==================== CONTACT SECTION ==================== -->
     <section>
       <div class="container">
-        <div class="about-content" style="gap: 3rem">
+        <div class="contact-grid">
           <!-- Contact Info -->
-          <div class="about-text animate-on-scroll">
+          <div class="contact-info animate-on-scroll" style="align-self: start">
             <h2>Get in Touch</h2>
             <p>
               Whether you need a custom app, a website, tech support, or just
@@ -77,82 +77,47 @@
               Solomon Islands and respond to all inquiries personally.
             </p>
 
-            <div style="margin-top: 2rem">
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  margin-bottom: 1.5rem;
-                "
-              >
-                <div style="font-size: 1.5rem">📧</div>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-item-icon">📧</div>
                 <div>
                   <strong>Email</strong><br />
-                  <a
-                    href="mailto:isltechroom@gmail.com"
-                    style="color: var(--accent)"
+                  <a href="mailto:isltechroom@gmail.com"
                     >isltechroom@gmail.com</a
                   >
                 </div>
               </div>
 
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  margin-bottom: 1.5rem;
-                "
-              >
-                <div style="font-size: 1.5rem">☎️</div>
+              <div class="contact-item">
+                <div class="contact-item-icon">☎️</div>
                 <div>
                   <strong>Phone</strong><br />
-                  <a href="tel:+677 7257434" style="color: var(--accent)"
-                    >+677 7257434</a
-                  >
+                  <a href="tel:+677 7257434">+677 7257434</a>
                 </div>
               </div>
 
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  margin-bottom: 1.5rem;
-                "
-              >
-                <div style="font-size: 1.5rem">📍</div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
                 <div>
                   <strong>Location</strong><br />
                   <span>Honiara, Solomon Islands</span>
                 </div>
               </div>
 
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  margin-bottom: 1.5rem;
-                "
-              >
-                <div style="font-size: 1.5rem">🐙</div>
+              <div class="contact-item">
+                <div class="contact-item-icon">🐙</div>
                 <div>
                   <strong>GitHub</strong><br />
-                  <a href="#" style="color: var(--accent)"
-                    >github.com/isltech</a
-                  >
+                  <a href="#">github.com/isltech</a>
                 </div>
               </div>
 
-              <div style="display: flex; align-items: center; gap: 1rem">
-                <div style="font-size: 1.5rem">📘</div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📘</div>
                 <div>
                   <strong>Facebook</strong><br />
                   <a
                     href="https://www.facebook.com/profile.php?id=61590970205500&sk=directory_links"
-                    style="color: var(--accent)"
                     >isl-Tech</a
                   >
                 </div>
@@ -161,91 +126,34 @@
           </div>
 
           <!-- Contact Form -->
-          <div class="about-text animate-on-scroll animate-in-delay-1">
+          <div class="contact-form animate-on-scroll animate-in-delay-1">
             <h2>Send a Message</h2>
-            <form
-              id="contact-form"
-              style="display: flex; flex-direction: column; gap: 1rem"
-            >
-              <div>
-                <label
-                  for="name"
-                  style="
-                    display: block;
-                    margin-bottom: 0.4rem;
-                    font-weight: 500;
-                  "
-                  >Your Name</label
-                >
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   placeholder="John Smith"
                   required
-                  style="
-                    width: 100%;
-                    padding: 0.75rem 1rem;
-                    border-radius: 8px;
-                    border: 1px solid var(--border-color);
-                    background: var(--bg-primary);
-                    color: var(--text-primary);
-                    font-size: 1rem;
-                  "
                 />
               </div>
 
-              <div>
-                <label
-                  for="email"
-                  style="
-                    display: block;
-                    margin-bottom: 0.4rem;
-                    font-weight: 500;
-                  "
-                  >Your Email</label
-                >
+              <div class="form-group">
+                <label for="email">Your Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="john@example.com"
                   required
-                  style="
-                    width: 100%;
-                    padding: 0.75rem 1rem;
-                    border-radius: 8px;
-                    border: 1px solid var(--border-color);
-                    background: var(--bg-primary);
-                    color: var(--text-primary);
-                    font-size: 1rem;
-                  "
                 />
               </div>
 
-              <div>
-                <label
-                  for="subject"
-                  style="
-                    display: block;
-                    margin-bottom: 0.4rem;
-                    font-weight: 500;
-                  "
-                  >Subject</label
-                >
-                <select
-                  id="subject"
-                  name="subject"
-                  style="
-                    width: 100%;
-                    padding: 0.75rem 1rem;
-                    border-radius: 8px;
-                    border: 1px solid var(--border-color);
-                    background: var(--bg-primary);
-                    color: var(--text-primary);
-                    font-size: 1rem;
-                  "
-                >
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
                   <option value="general">General Inquiry</option>
                   <option value="project">Project Request</option>
                   <option value="support">Technical Support</option>
@@ -254,41 +162,18 @@
                 </select>
               </div>
 
-              <div>
-                <label
-                  for="message"
-                  style="
-                    display: block;
-                    margin-bottom: 0.4rem;
-                    font-weight: 500;
-                  "
-                  >Message</label
-                >
+              <div class="form-group">
+                <label for="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
                   placeholder="Tell us about your project or question..."
                   required
-                  style="
-                    width: 100%;
-                    padding: 0.75rem 1rem;
-                    border-radius: 8px;
-                    border: 1px solid var(--border-color);
-                    background: var(--bg-primary);
-                    color: var(--text-primary);
-                    font-size: 1rem;
-                    resize: vertical;
-                    min-height: 120px;
-                  "
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                class="btn btn-primary"
-                style="align-self: flex-start"
-              >
+              <button type="submit" class="btn btn-primary">
                 ✉️ Send Message
               </button>
             </form>

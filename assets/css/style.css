@@ -1327,7 +1327,11 @@ section {
   }
 
   .hero-visual {
-    display: none;
+    margin-top: 2rem;
+  }
+
+  .hero-cover {
+    max-width: 320px;
   }
 
   .section-title {
